@@ -16,14 +16,13 @@
     <p>{{ form.submit() }}</p>
 </form>
 
+<h3>NameList</h3>
+{% if names is defined %}
 <ul>
-    <li>Tim</li>
-    <li>Tim</li>
-    <li>Tim</li>
-    <li>Tim</li>
-    <li>Tim</li>
-    <li>Tim</li>
-    <li>Tim</li>
+    {% for name in names %}
+    <li>{{ name }}</li>
+    {% endfor %}
 </ul>
+{% endif %}
 </body>
 </html>
