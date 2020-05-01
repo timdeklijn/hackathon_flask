@@ -51,9 +51,10 @@ def index():
         pet_w = request.form.get("petal_width")
         # Predict variety and use the label encoder to transform the label back to a string
         variety = le.inverse_transform(model.predict([[sep_l, sep_w, pet_l, pet_w]]))[0]
-    return render_template("index.html", form=form, variety=variety, image_link=images[variety])
+    link = images[variety] if variety else None
+    return render_template("index.html", form=form, variety=variety, image_link=link)
 
 
 if __name__ == "__main__":
     # Start the app
-    app.run(host="0.0.0.0", debug=True, port=5000)
+    app.run(host="0.0.0.0", debug=True, port=80)

@@ -31,7 +31,7 @@
     <p>{{ form.submit() }}</p>
 </form>
 
-{% if variety is defined %}
+{% if variety is not none %}
 <h2>{{ variety }}</h2>
 <div class="flower">
     <img src="{{ image_link }}">
