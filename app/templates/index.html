@@ -6,7 +6,16 @@
 </head>
 <body>
 <h1>Hello World</h1>
-<h2>Name: {{ name }}</h2>
+
+<form action="" method="post" novalidation>
+    {{ form.hidden_tag() }}
+    <p>
+        {{ form.name.label }}
+        {{ form.name(size=30) }}
+    </p>
+    <p>{{ form.submit() }}</p>
+</form>
+
 <ul>
     <li>Tim</li>
     <li>Tim</li>
