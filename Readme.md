@@ -3,7 +3,7 @@
 ## TODO
 
 - [ ] Setup Flask app
-- [ ] Intro on flask and web apps
+- [ ] Intro on Flask and web apps
     - [ ] Add template
     - [ ] Send data to template
     - [ ] Routing example
