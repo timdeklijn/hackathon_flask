@@ -1,21 +1,30 @@
+import os
+
 from flask import Flask, render_template, request
 from flask_wtf import FlaskForm
-from wtforms import StringField, SubmitField
+from wtforms import StringField, SubmitField, FloatField
+import pickle
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = "secret"
 
 names = []
 
+model = pickle.load(open(os.path.join("model.pk"), 'rb'))
 
-class InputForm(FlaskForm):
-    name = StringField("Input Your name")
-    submit = SubmitField("Submit Name")
+
+class IrisForm(FlaskForm):
+    sepal_length = FloatField("Sepal Lenght")
+    sepal_width = FloatField("sepal_width")
+    petal_length = FloatField("petal_length")
+    petal_width = FloatField("petal_width")
+    submit = SubmitField("Submit Measured Flower")
 
 
 @app.route("/", methods=["GET", "POST"])
 def index():
-    form = InputForm()
+    print(model)
+    form = IrisForm()
     if request.method == "POST":
         names.append(request.form.get("name"))
     return render_template("index.html", form=form, names=names)

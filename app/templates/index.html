@@ -5,24 +5,27 @@
     <title>Hackathon Flask</title>
 </head>
 <body>
-<h1>Hello World</h1>
+<h1>IRIS</h1>
 
 <form action="" method="post" novalidation>
     {{ form.hidden_tag() }}
     <p>
-        {{ form.name.label }}
-        {{ form.name(size=30) }}
+        {{ form.sepal_length.label }}
+        {{ form.sepal_length(size=8) }}
+    </p>
+    <p>
+        {{ form.sepal_width.label }}
+        {{ form.sepal_width(size=8) }}
+    </p>
+    <p>
+        {{ form.petal_length.label }}
+        {{ form.petal_length(size=8) }}
+    </p>
+    <p>
+        {{ form.petal_width.label }}
+        {{ form.petal_width(size=8) }}
     </p>
     <p>{{ form.submit() }}</p>
 </form>
-
-<h3>NameList</h3>
-{% if names is defined %}
-<ul>
-    {% for name in names %}
-    <li>{{ name }}</li>
-    {% endfor %}
-</ul>
-{% endif %}
 </body>
 </html>
