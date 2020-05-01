@@ -3,33 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <title>Hackathon Flask</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
+
 </head>
 <body>
-<h1>IRIS</h1>
+<h1>Classify Your Iris</h1>
 
 <form action="" method="post" novalidation>
     {{ form.hidden_tag() }}
-    <p>
-        {{ form.sepal_length.label }}
+    <div class="length-input">
+        <div class="label">{{ form.sepal_length.label }}</div>
         {{ form.sepal_length(size=8) }}
-    </p>
-    <p>
-        {{ form.sepal_width.label }}
+    </div>
+    <div class="length-input">
+        <div class="label">{{ form.sepal_width.label }}</div>
         {{ form.sepal_width(size=8) }}
-    </p>
-    <p>
-        {{ form.petal_length.label }}
+    </div>
+    <div class="length-input">
+        <div class="label">{{ form.petal_length.label }}</div>
         {{ form.petal_length(size=8) }}
-    </p>
-    <p>
-        {{ form.petal_width.label }}
+    </div>
+    <div class="length-input">
+        <div class="label">{{ form.petal_width.label }}</div>
         {{ form.petal_width(size=8) }}
-    </p>
+    </div>
     <p>{{ form.submit() }}</p>
-
-    {% if variety is defined %}
-    <h2>{{ variety }}</h2>
-    {% endif %}
 </form>
+
+{% if variety is defined %}
+<h2>{{ variety }}</h2>
+<div class="flower">
+    <img src="{{ image_link }}">
+</div>
+{% endif %}
 </body>
 </html>

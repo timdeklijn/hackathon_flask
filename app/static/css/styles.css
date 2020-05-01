@@ -1,0 +1,45 @@
+/*!* HEX *!*/
+/*$color1: #545863ff;*/
+/*$color2: #d6f8d6ff;*/
+/*$color3: #e6efe9ff;*/
+/*$color4: #dd6e42ff;*/
+/*$color5: #e36397ff;*/
+
+body {
+    font-family: 'Arvo', serif;
+    text-align: center;
+    background: #545863ff;
+}
+
+h1 {
+    font-size: 5rem;
+    color: #dd6e42ff;
+}
+
+.length-input {
+    font-size: 2rem;
+    color: #e6efe9ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.label {
+    display: inline-block;
+    margin: 1.5rem 1rem;
+}
+
+.flower {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    max-height: 300px;
+}
+
+h2 {
+    font-size: 3rem;
+    color: #e36397ff;
+}
