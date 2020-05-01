@@ -2,3 +2,12 @@
 
 ## TODO
 
+- [ ] Setup Flask app
+- [ ] Intro on flask and web apps
+    - [ ] Add template
+    - [ ] Send data to template
+    - [ ] Routing example
+- [ ] Create form (input for model)
+    - [ ] Create Form
+    - [ ] Post Request
+    - [ ] Handle Post, Show on template
