@@ -7,9 +7,11 @@ app.config["SECRET_KEY"] = "secret"
 
 names = []
 
+
 class InputForm(FlaskForm):
     name = StringField("Input Your name")
     submit = SubmitField("Submit Name")
+
 
 @app.route("/", methods=["GET", "POST"])
 def index():
