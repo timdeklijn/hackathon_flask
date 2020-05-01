@@ -1,10 +1,3 @@
-/*!* HEX *!*/
-/*$color1: #545863ff;*/
-/*$color2: #d6f8d6ff;*/
-/*$color3: #e6efe9ff;*/
-/*$color4: #dd6e42ff;*/
-/*$color5: #e36397ff;*/
-
 body {
     font-family: 'Arvo', serif;
     text-align: center;
@@ -12,8 +5,17 @@ body {
 }
 
 h1 {
-    font-size: 5rem;
+    font-size: 4rem;
     color: #dd6e42ff;
+}
+
+h2 {
+    font-size: 3rem;
+    color: #e36397ff;
+}
+
+img {
+    max-height: 300px;
 }
 
 .length-input {
@@ -26,20 +28,13 @@ h1 {
 
 .label {
     display: inline-block;
-    margin: 1.5rem 1rem;
+    margin: 1.25rem 1rem;
 }
 
 .flower {
+    margin: 3rem auto;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-img {
-    max-height: 300px;
-}
-
-h2 {
-    font-size: 3rem;
-    color: #e36397ff;
-}
